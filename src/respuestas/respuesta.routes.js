@@ -39,3 +39,5 @@ router.post(
         validarInformacion
     ],respuestaPost
 );
+
+export default router;
