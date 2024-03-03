@@ -1,8 +1,8 @@
 import { check } from "express-validator";
 import { Router } from "express";
-import { validarJWT } from "../middlewares/validar-jwt";
-import { encontrarPost ,validarInformacion } from "../middlewares/validarCampos";
-import { postDelete, postGet, postPost, postPut } from "./post.controller";
+import { validarJWT } from "../middlewares/validar-jwt.js";
+import { encontrarPost ,validarInformacion } from "../middlewares/validarCampos.js";
+import { postDelete, postGet, postPost, postPut } from "./post.controller.js";
 
 const router = Router();
 

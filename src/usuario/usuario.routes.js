@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { validarJWT } from "../middlewares/validar-jwt";
-import { usuarioCorreo } from "../helpers/validar-db";
-import { usuarioPost, usuarioPut, usuarioDelete  } from "./usuario.controller";
-import { validarInformacion, comprobarPassword } from "../middlewares/validarCampos";
+import { validarJWT } from "../middlewares/validar-jwt.js";
+import { usuarioCorreo } from "../helpers/validar-db.js";
+import { usuarioPost, usuarioPut, usuarioDelete  } from "./usuario.controller.js";
+import { validarInformacion, comprobarPassword } from "../middlewares/validarCampos.js";
 
 const router = Router();
 

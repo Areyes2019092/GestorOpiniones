@@ -1,8 +1,8 @@
 import { check } from "express-validator";
 import { Router } from "express";
-import { validarInformacion, encontrarRespuesta,  idRepetido} from "../middlewares/validarCampos";
-import { validarJWT } from "../middlewares/validar-jwt";
-import {  respuestaGet , respuestaPut ,respuestaPost ,respuestaDelete } from "./respuesta.controller";
+import { validarInformacion, encontrarRespuesta,  idRepetido} from "../middlewares/validarCampos.js";
+import { validarJWT } from "../middlewares/validar-jwt.js";
+import {  respuestaGet , respuestaPut ,respuestaPost ,respuestaDelete } from "./respuesta.controller.js";
 
 const router = Router();
 
