@@ -8,8 +8,8 @@ export const usuarioId = async (id = '') => {
 }
 
 export const usuarioCorreo = async (correo = '') => {
-    const correo = await User.findOne({correo});
-    if (correo){
+    const email = await User.findOne({correo});
+    if (email){
         throw new Error('Este correo ya esta en uso')
     }
 }
