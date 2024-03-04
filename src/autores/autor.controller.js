@@ -1,3 +1,4 @@
+/*
 import bcryptjs from 'bcryptjs';
 import { generateJWT } from '../helpers/generar-jwt.js';
 import Usuario from '../usuario/usuario.model.js'
@@ -36,3 +37,4 @@ export const login = async(req, res) => {
         res.status(500).json({ msg: 'Error en el servidor' });
     }
 }
+*/

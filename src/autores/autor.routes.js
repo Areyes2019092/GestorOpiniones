@@ -1,4 +1,4 @@
-import { check } from "express-validator";
+/*import { check } from "express-validator";
 import { Router } from "express";
 import { validarInformacion, datosPrincipales, datosPrincipalesMal } from "../middlewares/validarCampos.js";
 import { login } from "./autor.controller.js";
@@ -16,3 +16,4 @@ router.post(
 )
 
 export default router;
+*/

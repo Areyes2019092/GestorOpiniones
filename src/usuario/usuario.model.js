@@ -5,6 +5,10 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: [true, "El usuario es obligatorio"]
     },
+    user:{
+        type: String,
+        required: [true, 'El correo es obligatorio']
+    },
     email:{
         type: String,
         required: [true, 'El correo es obligatorio']
@@ -13,9 +17,6 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: [true, "La contraseña es obligatoria"]
     },
-    img:{
-        type: String
-    },
     estado:{
         type: Boolean,
         default: true
@@ -23,9 +24,9 @@ const UserSchema = mongoose.Schema({
 });
 
 UserSchema.methods.toJSON = function () {
-    const { _v, password, _id, ...usuario } = this.toObject();
-    usuario.uid = _id;
-    return usuario;
+    const { __v, password, _id, ...userss } = this.toObject();
+    userss.uid = _id;
+    return userss;
 }
 
-export default mongoose.model('User', UserSchema);
+export default mongoose.model("User", UserSchema);

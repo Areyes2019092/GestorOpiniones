@@ -17,41 +17,83 @@ export const respuestaGet = async(req, res = response)=>{
     })
 }
 
-export const respuestaPut = async(req, res) =>{
-    const { postId, autorId , estado, ...resto } = req.body;
-    const { id } = req.params;
-    await Respuesta.findByIdAndUpdate(id, resto);
-    const respuesta = await Respuesta.findOne({ _id: id});
-    await respuesta.save();
-    res.status(200).json({msg: 'La respuesta se actualiza correctamente'});
+export const respuestaPut = async (req, res) => {
+    try {
+        const permitido = req.usuario;
+        const { id } = req.params;
+        const usuarioRespuesta = await Respuesta.findById(id);
+        
+        const { contenido } = req.body;
+        if (!usuarioRespuesta) {
+            return res.status(404).json({
+                msg: "No se encontró el comentario"
+            });
+        }
+        
+        if (usuarioRespuesta.nombre.toString() !== permitido.id) { 
+            return res.status(400).json({
+                msg: "No se puede editar la respuesta"
+            });
+        }
+        
+        await Respuesta.findByIdAndUpdate(id, { contenido }); 
+        
+        res.status(200).json({ msg: 'Se actualizó su respuesta' });
+    } catch (error) { 
+        res.status(500).json({
+            msg: "Error al actualizar la respuesta",
+            error: error.message
+        });
+    }
 }
 
-export const respuestaPost = async(req, res) =>{
-    const {id} = req.params;
-    const {contenido} = req.body;
-    const nombre = req.usuario.nombre;
-    const autorId = req.usuario._id;
-    const post = await Post.findByIdAndUpdate(
-        {_id:id, respuesta:{$ne: respuesta._id}},
-        {$addToSet:{respuesta: respuesta._id }},
-        {new: true}
-    )
-    const respuesta = new Respuesta({
-        nombre, contenido, postId: id, autorId
-    });
-    await post.save();
-    await respuesta.save();
-   
-    res.status(200).json({
-        msg: 'Haz publicado una respuesta'
-    })
+
+export const respuestaPost = async (req, res) => {
+    try {
+        const permitido = req.usuario;
+        const { contenido } = req.body;
+        const { id } = req.params;
+        
+        const post = await Post.findById(id);
+        if (!post) {
+            return res.status(404).json({
+                msg: "No se encontró el post"
+            });
+        }
+        
+        const respuesta = new Respuesta({ contenido, nombre: permitido.id });
+        await respuesta.save();
+        
+        // Agregar la respuesta al post
+        await Post.addRespuestaById(id, respuesta._id);
+        
+        res.status(200).json({ msg: 'Se publicó la respuesta' });
+    } catch (error) {
+        res.status(500).json({ msg: 'No se pudo publicar la respuesta', error });
+    }
 }
+
 
 export const respuestaDelete = async(req, res)=>{
-    const {id} = req.params;
-    await Respuesta.findByIdAndUpdate(id,{estado: false})
-    
-    res.status(200).json({
-        msg: 'La respuesta al post se elimino'
-    });
+    const permitido = req.usuario;
+    const { id } = req.params;
+    const respuestaUsuario = await Respuesta.findById(id);
+    if(!respuestaUsuario){
+        return res.status(404).json({
+            msg: "No se encontro el comentario"
+        });
+    }
+    if (respuestaUsuario.nombre.toString() !== permitido.id) { 
+        return res.status(400).json({
+            msg: 'No se pudo eliminar el comentario'
+        });
+    }
+    try {
+        await Respuesta.findByIdAndUpdate(id, { estado: false });
+        res.status(200).json({
+            msg: 'La respuesta al post se elimino'
+        });
+    } catch (error) { 
+        res.status(500).json({msg: 'No se pudo eliminar la respuesta'})
+    }
 }

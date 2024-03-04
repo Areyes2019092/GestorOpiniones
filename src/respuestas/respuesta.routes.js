@@ -1,19 +1,20 @@
 import { check } from "express-validator";
 import { Router } from "express";
-import { validarInformacion, encontrarRespuesta,  idRepetido} from "../middlewares/validarCampos.js";
+import { validarInformacion} from "../middlewares/validarCampos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
-import {  respuestaGet , respuestaPut ,respuestaPost ,respuestaDelete } from "./respuesta.controller.js";
+import { respuestaPut ,respuestaPost ,respuestaDelete } from "./respuesta.controller.js";
+import { postExiste, respuestaExiste } from "../helpers/validar-db.js";
 
 const router = Router();
-
-router.get("/",respuestaGet);
 
 router.put(
     "/:id",
     [
         validarJWT,
-        encontrarRespuesta,
-        validarInformacion
+        check("id").isMongoId(),
+       // check("id").custom(respuestaExiste),
+        check("contenido", "La respuesta es obligatoria").not().isEmpty(),
+        validarInformacion,
     ],respuestaPut
     );
 
@@ -22,21 +23,21 @@ router.delete(
     "/:id",
     [
         validarJWT,
-        encontrarRespuesta,
-        validarInformacion
-    ],respuestaDelete
+        check("id").isMongoId(),
+       // check("id").custom(respuestaExiste),
+        validarInformacion,
+     ],respuestaDelete
 );
 
 
 router.post(
     "/:id",
     [
+        check("id").isMongoId(),
+     //   check("id").custom(postExiste),
         validarJWT,
-        idRepetido,
-        check("contenido","El texto no puede ir vacio").isLength({
-            min: 1
-        }),
-        validarInformacion
+        check("contenido", "El contenido es obligatorio").not().isEmpty(),
+        validarInformacion,
     ],respuestaPost
 );
 

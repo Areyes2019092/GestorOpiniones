@@ -1,0 +1,95 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Inicio",
+    "dateExported": "2024-03-04T23:43:59.296Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "228e24ec-35ad-4d74-a65e-7167c284ff20",
+            "colId": "6efbe474-e85e-4b60-9fb6-4aa8517f0b0f",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/GestorOpiniones/v1/user",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-04T23:43:08.803Z",
+            "modified": "2024-03-04T23:43:08.803Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"user\": \"pereiraraaaa\",\n  \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "727fa1c6-af72-4d56-a590-53f88fb2b026",
+            "colId": "6efbe474-e85e-4b60-9fb6-4aa8517f0b0f",
+            "containerId": "",
+            "name": "register",
+            "url": "http://localhost:3000/GestorOpiniones/v1/user",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T23:43:08.804Z",
+            "modified": "2024-03-04T23:43:08.804Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Angel\",\n  \"user\" : \"pereiraraaaa\",\n  \"email\": \"peree@gmail.com\",\n  \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6d411721-f575-4b84-87fa-1edb5e38b174",
+            "colId": "6efbe474-e85e-4b60-9fb6-4aa8517f0b0f",
+            "containerId": "",
+            "name": "editName",
+            "url": "http://localhost:3000/GestorOpiniones/v1/user",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-04T23:43:08.805Z",
+            "modified": "2024-03-04T23:43:38.222Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NGJjZmU2NzczZGRjNjg0NjU2ZDYiLCJpYXQiOjE3MDk1OTE1MTcsImV4cCI6MTcwOTU5ODcxN30.bg3imOcJ1SWtSDstO7QdbgbG7ybwBlMapKNesMmH3OU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Pepe\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "29051f66-5807-44e5-959a-ad1ae2236012",
+            "colId": "6efbe474-e85e-4b60-9fb6-4aa8517f0b0f",
+            "containerId": "",
+            "name": "editPassword",
+            "url": "http://localhost:3000/GestorOpiniones/v1/user/password/",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-04T23:43:08.806Z",
+            "modified": "2024-03-04T23:43:08.806Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2MDQzOWNlNjVkYzZlZTc4NTJhYmQiLCJpYXQiOjE3MDk1NzMxODUsImV4cCI6MTcwOTU4MDM4NX0.9RGarkQ-bs3I0HTka460pe2WPTbVZwNLfV7Jwr8rPWA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"contrasenaAnterior\" : \"123456\",\n  \"contrasenaNueva\" : \"52352\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Post",
+    "dateExported": "2024-03-04T23:44:05.504Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b87382f9-a691-4b04-8388-cab8b493e5a7",
+            "colId": "2f41d9bb-a4bd-472f-9542-dcc25beb6420",
+            "containerId": "",
+            "name": "crearPost",
+            "url": "http://localhost:3000/GestorOpiniones/v1/post",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T23:43:08.818Z",
+            "modified": "2024-03-04T23:43:08.818Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NGJjZmU2NzczZGRjNjg0NjU2ZDYiLCJpYXQiOjE3MDk1OTE1MTcsImV4cCI6MTcwOTU5ODcxN30.bg3imOcJ1SWtSDstO7QdbgbG7ybwBlMapKNesMmH3OU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"principal\" : \"Kinal\",\n  \"categoria\": \"Educacion\",\n  \"contenido\": \"Ya no quiero estudiar\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4bfe7ff5-21b2-40e8-9182-ed6a78dcaf1c",
+            "colId": "2f41d9bb-a4bd-472f-9542-dcc25beb6420",
+            "containerId": "",
+            "name": "editarPublicacion",
+            "url": "http://localhost:3000/GestorOpiniones/v1/post/65e64c0ce6773ddc684656e0",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-04T23:43:08.819Z",
+            "modified": "2024-03-04T23:43:08.819Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NGJjZmU2NzczZGRjNjg0NjU2ZDYiLCJpYXQiOjE3MDk1OTE1MTcsImV4cCI6MTcwOTU5ODcxN30.bg3imOcJ1SWtSDstO7QdbgbG7ybwBlMapKNesMmH3OU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"principal\" : \"Kinal\",\n  \"categoria\": \"Educacion\",\n  \"contenido\": \"Ya no dejen tareas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e23e9f6b-b0aa-4290-bc79-be8f4b05d274",
+            "colId": "2f41d9bb-a4bd-472f-9542-dcc25beb6420",
+            "containerId": "",
+            "name": "eliminarPost",
+            "url": "http://localhost:3000/GestorOpiniones/v1/post/65e64c0ce6773ddc684656e0",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-04T23:43:08.820Z",
+            "modified": "2024-03-04T23:43:08.820Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NGJjZmU2NzczZGRjNjg0NjU2ZDYiLCJpYXQiOjE3MDk1OTE1MTcsImV4cCI6MTcwOTU5ODcxN30.bg3imOcJ1SWtSDstO7QdbgbG7ybwBlMapKNesMmH3OU"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "15678548-65df-4200-9e8b-50556200d5b0",
+            "colId": "2f41d9bb-a4bd-472f-9542-dcc25beb6420",
+            "containerId": "",
+            "name": "Categorias",
+            "url": "http://localhost:3000/GestorOpiniones/v1/post/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-04T23:43:08.821Z",
+            "modified": "2024-03-04T23:43:08.821Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2MDQzOWNlNjVkYzZlZTc4NTJhYmQiLCJpYXQiOjE3MDk1NzMxODUsImV4cCI6MTcwOTU4MDM4NX0.9RGarkQ-bs3I0HTka460pe2WPTbVZwNLfV7Jwr8rPWA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

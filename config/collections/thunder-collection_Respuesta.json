@@ -1,0 +1,76 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Respuesta",
+    "dateExported": "2024-03-04T23:44:10.901Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "eb931b7a-5362-4c5f-b370-94887fe61e43",
+            "colId": "04c688eb-f302-4af6-b16b-1ea1f8893013",
+            "containerId": "",
+            "name": "putRespuesta",
+            "url": "http://localhost:3000/GestorOpiniones/v1/respuesta/65e65825642426cf35f0cd3a",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-03-04T23:43:08.835Z",
+            "modified": "2024-03-04T23:43:08.835Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NGJjZmU2NzczZGRjNjg0NjU2ZDYiLCJpYXQiOjE3MDk1OTE1MTcsImV4cCI6MTcwOTU5ODcxN30.bg3imOcJ1SWtSDstO7QdbgbG7ybwBlMapKNesMmH3OU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"contenido\" : \"Ya no quiero estudiar\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "361bfc44-b4c8-481f-ae37-bfb5e2d9d3fd",
+            "colId": "04c688eb-f302-4af6-b16b-1ea1f8893013",
+            "containerId": "",
+            "name": "deleteRespuesta",
+            "url": "http://localhost:3000/GestorOpiniones/v1/respuesta/65e65825642426cf35f0cd3a",
+            "method": "DELETE",
+            "sortNum": 15000,
+            "created": "2024-03-04T23:43:08.837Z",
+            "modified": "2024-03-04T23:43:08.837Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NGJjZmU2NzczZGRjNjg0NjU2ZDYiLCJpYXQiOjE3MDk1OTE1MTcsImV4cCI6MTcwOTU5ODcxN30.bg3imOcJ1SWtSDstO7QdbgbG7ybwBlMapKNesMmH3OU"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "857f6f1d-9c24-40d4-8b98-c003fd9e6a89",
+            "colId": "04c688eb-f302-4af6-b16b-1ea1f8893013",
+            "containerId": "",
+            "name": "postRespuesta",
+            "url": "http://localhost:3000/GestorOpiniones/v1/respuesta/65e651e1239401cc610df8e5",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T23:43:08.836Z",
+            "modified": "2024-03-04T23:43:08.836Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU2NGJjZmU2NzczZGRjNjg0NjU2ZDYiLCJpYXQiOjE3MDk1OTE1MTcsImV4cCI6MTcwOTU5ODcxN30.bg3imOcJ1SWtSDstO7QdbgbG7ybwBlMapKNesMmH3OU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"contenido\" : \"tengo nada\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
