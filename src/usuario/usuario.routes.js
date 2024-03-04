@@ -2,7 +2,7 @@ import { Router } from "express";
 import { check } from "express-validator";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { usuarioCorreo } from "../helpers/validar-db.js";
-import { usuarioPost, usuarioPut  } from "./usuario.controller.js";
+import { usuarioPost, usuarioPut } from "./usuario.controller.js";
 import { validarInformacion, comprobarPassword } from "../middlewares/validarCampos.js";
 
 const router = Router();
