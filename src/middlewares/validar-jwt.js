@@ -14,20 +14,19 @@ export const validarJWT = async (req, res, next) => {
         if (!usuario) {
             return res.status(401).json({
                 msg: 'El usuario no existe'
-            })
+            });
         }
         if (!usuario.state) {
             return res.status(401).json({
-                msg: 'El usuario esta inhabilitado'
-            })
+                msg: 'El usuario está inhabilitado'
+            });
         }
         req.usuario = usuario;
-        req.usuarioId = await Usuario.findById(uid);
         next();
-    } catch (e) {
-        console.log(e),
-            res.status(401).json({
-                msg: "El token no es valido"
-            });
+    } catch (error) {
+        console.error(error);
+        res.status(401).json({
+            msg: "El token no es válido"
+        });
     }
-}
+};
