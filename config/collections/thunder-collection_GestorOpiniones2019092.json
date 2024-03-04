@@ -1,0 +1,231 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "GestorOpiniones2019092",
+    "dateExported": "2024-03-04T00:00:36.419Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "aebac445-1c91-4197-8592-e79ef6838a3d",
+            "name": "Registrarse",
+            "containerId": "",
+            "created": "2024-03-03T23:16:21.446Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "043bd7a9-e890-4b53-a778-c5190ac7ef03",
+            "name": "Login",
+            "containerId": "",
+            "created": "2024-03-03T23:16:28.610Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "65ec4a2f-a421-4ef5-978a-f730c65be9f0",
+            "name": "Post",
+            "containerId": "",
+            "created": "2024-03-03T23:16:45.182Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "e0a2b803-5064-48a1-9193-10357e3627ac",
+            "name": "Respuesta",
+            "containerId": "",
+            "created": "2024-03-03T23:16:54.680Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "543a2671-7752-4047-b452-af1fadc67b82",
+            "name": "VerPostYRespuestas",
+            "containerId": "",
+            "created": "2024-03-03T23:17:08.025Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "3e1c0e00-aea6-4e2b-ae7e-b6acb21fcc57",
+            "name": "Usuario",
+            "containerId": "",
+            "created": "2024-03-03T23:18:36.490Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d15a7770-c42d-4016-baa9-1a8be7145322",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "aebac445-1c91-4197-8592-e79ef6838a3d",
+            "name": "registroPost",
+            "url": "",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-03T23:17:20.735Z",
+            "modified": "2024-03-03T23:18:04.741Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"name\": \"Angel\",\r\n    \"email\": \"areyes2019092@kinal.edu.gt\",\r\n    \"password\": \"123456\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7c247535-6d9a-4653-9443-a1b4c2e9af00",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "043bd7a9-e890-4b53-a778-c5190ac7ef03",
+            "name": "loginPost",
+            "url": "",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-03T23:18:17.038Z",
+            "modified": "2024-03-03T23:18:20.563Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8cb5199f-c7e2-403b-9bfd-ab61813a5c2b",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "65ec4a2f-a421-4ef5-978a-f730c65be9f0",
+            "name": "editarPost",
+            "url": "",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-03T23:18:52.685Z",
+            "modified": "2024-03-03T23:20:32.059Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d657da6c-9b43-41b6-90d3-44a79b211661",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "65ec4a2f-a421-4ef5-978a-f730c65be9f0",
+            "name": "agregarPost",
+            "url": "",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-03T23:19:02.080Z",
+            "modified": "2024-03-03T23:20:25.856Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "be41b27b-9100-4636-ad92-b4897acc135d",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "65ec4a2f-a421-4ef5-978a-f730c65be9f0",
+            "name": "eliminarPost",
+            "url": "",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-03T23:19:55.380Z",
+            "modified": "2024-03-03T23:20:20.280Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "59e210e7-245d-4757-945d-3c07ff29de77",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "e0a2b803-5064-48a1-9193-10357e3627ac",
+            "name": "agregarRespuesta",
+            "url": "",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-03T23:21:15.947Z",
+            "modified": "2024-03-03T23:21:15.947Z",
+            "headers": []
+        },
+        {
+            "_id": "70e3e3a0-c921-4b75-937c-700110c83e6d",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "e0a2b803-5064-48a1-9193-10357e3627ac",
+            "name": "editarRespuesta",
+            "url": "",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-03-03T23:21:57.616Z",
+            "modified": "2024-03-03T23:22:02.652Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f612aa39-8bb2-448b-8d4d-1220fd2dddf7",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "e0a2b803-5064-48a1-9193-10357e3627ac",
+            "name": "eliminarRespuesta",
+            "url": "",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-03-03T23:22:13.226Z",
+            "modified": "2024-03-03T23:22:16.888Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4aa590c6-3c39-4585-9be6-833c0674cb37",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "3e1c0e00-aea6-4e2b-ae7e-b6acb21fcc57",
+            "name": "editarUsuario",
+            "url": "http://localhost:3000/GestorOpiniones/v1/user",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-03-03T23:22:35.963Z",
+            "modified": "2024-03-03T23:30:20.706Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwYjIxZGU1MWE3OWEzNGQwYzk2ZDciLCJpYXQiOjE3MDkyMjU1OTgsImV4cCI6MTcwOTIzMjc5OH0.mrYKkL2l-oHBJBdVW2_RhvcaaSrvW0wFbnoFXx7ZZ9g"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"name\": \"Angel\",\r\n    \"contrasenaAnterior\": \"123456\",\r\n    \"password\": \"123456\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1513ad6a-c911-456a-8f9d-411d4a9b20a8",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "3e1c0e00-aea6-4e2b-ae7e-b6acb21fcc57",
+            "name": "eliminarUsuario",
+            "url": "",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-03-03T23:22:48.188Z",
+            "modified": "2024-03-03T23:22:51.951Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1ab0c9fd-61b1-43d2-a626-6626c1e7b690",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "543a2671-7752-4047-b452-af1fadc67b82",
+            "name": "getPost",
+            "url": "",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-03-03T23:23:13.743Z",
+            "modified": "2024-03-03T23:23:13.743Z",
+            "headers": []
+        },
+        {
+            "_id": "dc83f60e-197d-4623-91e0-986f3e130eca",
+            "colId": "87953672-f75f-4826-961d-bb325371e389",
+            "containerId": "543a2671-7752-4047-b452-af1fadc67b82",
+            "name": "getRespuestas",
+            "url": "http://localhost:3000/GestorOpiniones/v1/respuesta",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-03-03T23:23:24.381Z",
+            "modified": "2024-03-03T23:37:47.872Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
