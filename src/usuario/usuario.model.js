@@ -18,7 +18,7 @@ const UserSchema = mongoose.Schema({
     },
     estado:{
         type: Boolean,
-        default: false
+        default: true
     }
 });
 

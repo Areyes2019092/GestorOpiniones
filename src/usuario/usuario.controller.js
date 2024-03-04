@@ -1,12 +1,6 @@
 import bcryptjs from 'bcryptjs';
 import Usuario from './usuario.model.js'
 
-export const usuarioDelete = async (req, res) => {
-    res.status(401).json({
-        error: 'No tienes los permisos para eliminar tu propio perfil'
-    });
-};
-
 
 export const usuarioPut = async(req, res) => {
     const id = req.usuarioId._id;
